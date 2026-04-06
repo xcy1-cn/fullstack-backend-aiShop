@@ -8,8 +8,8 @@ const products = require("../mock/products");
 const comments = require("../mock/comments");
 
 router.get("/detail", (req, res) => {
-    const id = Number(req.query.id);
-    const product = products.find((item) => item.id === id);
+    const id = Number(req.query.goodsId);
+    const product = products.find((item) => item.goodsId === id);
 
     if (!product) {
         return res.json(fail("商品不存在", 404));
@@ -19,7 +19,7 @@ router.get("/detail", (req, res) => {
 });
 
 router.get("/comments", (req, res) => {
-    const id = Number(req.query.id);
+    const id = Number(req.query.goodsId);
     res.json(
         success({
             total: comments[id] ?.length || 0,
@@ -28,19 +28,5 @@ router.get("/comments", (req, res) => {
     );
 });
 
-router.get("/service", (req, res) => {
-    const id = Number(req.query.id);
-    const product = products.find((item) => item.id === id);
-
-    if (!product) {
-        return res.json(fail("商品不存在", 404));
-    }
-
-    res.json(
-        success({
-            list: product.serviceList || [],
-        })
-    );
-});
 
 module.exports = router;

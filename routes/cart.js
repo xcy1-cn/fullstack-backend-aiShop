@@ -40,7 +40,7 @@ router.post("/add", (req, res) => {
         return res.json(fail("参数错误", 400));
     }
 
-    const product = products.find((item) => item.id === Number(goodsId));
+    const product = products.find((item) => item.goodsId === Number(goodsId));
 
     if (!product) {
         return res.json(fail("商品不存在", 404));

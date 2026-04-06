@@ -82,6 +82,7 @@ export const modules = [{
         "subtitle": "大家都在买",
         "goodsList": [{
                 "id": 101,
+                goodsId: 101,
                 "title": "高性能游戏手机",
                 "desc": "旗舰芯片，流畅体验",
                 "price": 4999,
@@ -91,6 +92,7 @@ export const modules = [{
             },
             {
                 "id": 102,
+                goodsId: 102,
                 "title": "轻薄办公笔记本",
                 "desc": "便携长续航",
                 "price": 5999,
@@ -107,6 +109,7 @@ export const modules = [{
         "subtitle": "精选配件",
         "goodsList": [{
             "id": 201,
+            goodsId: 201,
             "title": "主动降噪耳机",
             "desc": "沉浸式听感",
             "price": 1299,
