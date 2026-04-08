@@ -10,7 +10,10 @@ function fail(message = "fail", code = 500) {
     return {
         code,
         message,
-        data: null,
+        data: {
+            status: code,
+            message
+        },
     };
 }
 
