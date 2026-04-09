@@ -5,6 +5,7 @@ const homeRoutes = require("./routes/home");
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const userRoutes = require("./routes/user");
+const aiRoutes = require("./routes/ai")
 
 const app = express();
 const PORT = 3001;
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 app.use("/api/home", homeRoutes);
 app.use("/api/product", productRoutes);
 app.use("/api/cart", cartRoutes);
+app.use("/api/ai", aiRoutes);
 app.use("/api/user", userRoutes);
 
 app.listen(PORT, () => {
