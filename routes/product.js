@@ -28,5 +28,14 @@ router.get("/comments", (req, res) => {
     );
 });
 
+router.get("/allProduct", (req, res) => {
+    const typeNum = Number(req.query.typeNum)
+    if (!typeNum) {
+        return res.json(fail("分类不存在", 404));
+    }
+    res.json(success(products.filter((item) => item.typeNum === typeNum)));
+});
+
+
 
 module.exports = router;

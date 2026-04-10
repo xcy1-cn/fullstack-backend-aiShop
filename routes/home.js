@@ -3,7 +3,6 @@ const router = express.Router();
 const {
     success
 } = require("../utils/response");
-const products = require("../mock/products");
 const { swiper, main, modules } = require('../mock/home')
 
 router.get("/swiper", (req, res) => {

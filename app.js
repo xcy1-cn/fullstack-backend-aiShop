@@ -6,6 +6,7 @@ const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const userRoutes = require("./routes/user");
 const aiRoutes = require("./routes/ai")
+const orderRoutes = require("./routes/order")
 
 const app = express();
 const PORT = 3001;
@@ -32,7 +33,7 @@ app.get("/", (req, res) => {
         time: new Date().toISOString(),
     });
 });
-
+app.use("/api/order", orderRoutes);
 app.use("/api/home", homeRoutes);
 app.use("/api/product", productRoutes);
 app.use("/api/cart", cartRoutes);
